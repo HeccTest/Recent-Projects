@@ -61,7 +61,3 @@ Your code will be evaluated using the following criteria:
 - Code simplicity, cleanliness, organization, and readability
 - Data structures and algorithms used
 - Correctness of the output
-
-## How to Submit Your Solution?
-
-Create a new Git repository either on GitHub or GitLab, and make all your commits there. When ready, send a link to the repository as a reply to the message we sent you on Indeed. If you make the repo private, please remember to grant read permissions and send an invitation link to `kiro@justwebagency.com`.
