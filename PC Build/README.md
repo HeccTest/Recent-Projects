@@ -1,4 +1,4 @@
-Here are some pictures of my recent PC upgrade (not sure why the images are so large). Also sorry for the poor image quality, it was taken on my phone.
+Here are some pictures of my recent PC upgrade (the imgur link is easier to view). Also sorry for the poor image quality, it was taken on my phone.
 
 included is a list of most of the components and the links to their manufacturer websites, in case I need specfic manuals / warranties / general issues.
 
