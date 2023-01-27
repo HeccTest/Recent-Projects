@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies&display=swap'); /* importing font from google */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rowdies', cursive; /* applying imported font to entire document. cursive is the default font, if the import fails */
+}
+
+h1 {
+    color: aqua;
+}
+
+p {
+    color: red;
+}
+
+body {
+    background-color: black;
+}
+
+#navContainer div { /* creates a secondary bar underneath the navigation menu. Mainly for aesthetic purposes */
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    margin-top: 10vh;
+    background-color: brown;
+    align-items: center;
+    justify-content: center;
+}
+
+#navBar {
+    padding-top: 3vh; /* pushes the buttons towards the bottom of the navBar */
+    background-color: darkslateblue;
+    height: 10vh;
+    width: 100%;
+    top: 0; /* positions the navBar at the topmost position of its container */
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 1px 10px black; /* small shadow below the nav bar to make the bar look less flat */
+    z-index: 1; /* give the nav bar higher priority; nav bar will be on top of elements with lower z-index (secondary bar in this case) */
+    position: fixed;
+}
+
+button{
+    display: flex;
+    width: 20%;
+    border: none;
+    background-color: darkslateblue;
+    justify-content: center; /* centers flexbox items horizontally */
+    align-items: center; /* centers flexbox items vertically */
+    font-size: 25px;
+}
+
+#home {
+    width: 10%;
+}
+
+#mainContent {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+}
+
+#mainContent li { /* modify all <li> elements in element with id "mainContent" */
+    list-style: square;
+    font-size: 25px;
+    color: red;
+    padding-top: 2%;
+}
+
+#skillsBox div {
+    display: flex;
+    justify-content: space-evenly; /* centers and puts some space between the two columns in the skillsBox */
+}
+
+#skillsBox, #experiencesBox, #projectsBox { /* hides the other three boxes by default, so the home page content is the only showing when the page first loads */
+    display: none; /* javascript will unhide these boxes, when the user clicks the appropriate buttons */
+    width: 80vw;
+    overflow-x: hidden; /* hides the horizontal overflow (removing horizontal scroll wheels options that may appear due to elements being wider than the viewport width */
+}
+
+button {
+    transition-duration: 0.5s; /* when the button is interacted with (ie. hovered over) it will take this amount of time to complete the interaction */
+}
+
+button:hover {
+    cursor: pointer; /* changes the appearance of the cursor when hovered over; indicates that this button is clickable to the user */
+    color: rgba(255, 255, 255, 0.35);
+}
+
+
+#eduBox {
+    border: solid purple 3px;
+}
+.imgCascade {
+    margin-right: 0;
+    margin-top: 20vh;
+    min-width: 80%;
+    border: solid yellow 3px;
+}
+
+.imgCascade img {
+    min-width: 100%;
+    transition: 1.5s;
+    border: solid blue 3px;
+}
+
+.hiddenCascade {
+    transition: 1.5s;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%, 20vh);
+    color: green;
+    font-size: 30px;
+    border: solid red 3px;
+    overflow: hidden;
+}
+
+.showCascade {
+    opacity: 1;
+    transform: translate(0%, 20vh);
+}
+
+.experienceItem {
+    display: flex;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.experienceItem div ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.imgContainer {
+    width: 40%;
+    position: relative;
+    margin-right: 5vw;
+    text-align: center;
+}
+
+.imgContainer img {
+    border-radius: 40%;
+    transition: 0.5s;
+    width: 100%;
+}
+
+.imgContainer:hover img {
+    opacity: 0.4;
+}
+
+.imgContainer .imgText {
+    transition: 0.5s;
+    opacity: 0; /* text is hidden by default, until user hovers over the image */
+    position: absolute;
+    top: 45%; /* text is 45% from the top of the container */
+    left: 50%; /* ^ */
+    transform: translate(-50%, -50%); /* move the text left and up, such that the text will appear centered as opposed to the textbox being centered on the top left corner */
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+.imgContainer:hover .imgText {
+    opacity: 1;
+}
+
+.imgContainer p {
+    margin-top: 3vh;
+}
+
+
+
+
+.hidden { /* default class */
+    opacity: 0;
+    transition: all 1.5s; /* take 1.5s to complete any transformations */
+    transition-delay: 100ms; /* add a slight delay to prevent the content from feeling overwhelming; a bunch of things coming out fast seems stressful. Too much delay, might make webpage feel sluggish */
+    filter: blur(5px);
+}
+
+.hidden:nth-child(odd) { /* all odd numbered (1, 3) children will come in from the right; in the case of the elements in experienceBox there are 4 children from 1 to 4 */
+    transform: translateX(50%);
+}
+
+.hidden:nth-child(even) { /* all even numbered children will come in from the left */
+    transform: translateX(-50%);
+}
+
+
+.show:nth-child(n) { /* apply to all children of show */
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+
+
+#contact {
+    display: flex;
+    bottom: 0;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    margin-top: 5vh;
+    height: 50vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: darkslateblue;
+}
+
+#contact p { /* changes the appearance of the text in the footer */
+    color: black;
+}
