@@ -1,0 +1,62 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box; /* takes into account borders and paddings; makes sure content is contained within parent container
+  see here for more: https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing */
+}
+
+body {
+  background-color: #07141d;
+}
+
+#accordian {
+  margin: 100px auto;
+  width: 600px;
+}
+
+#accordian li {
+  list-style: none;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#accordian li label {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500px;
+  cursor: pointer;
+  color: #c20000;
+}
+
+#accordian li label span {
+  transform: rotate(-90deg);
+  font-size: 22px;
+  color: #333;
+}
+
+#accordian input[type="radio"] {
+  display: none; /* removes the visual of the radio button */
+}
+
+#accordian .content {
+  padding: 0 10px; /* top and bottom = 0, left and right = 10px */
+  line-height: 26px; /* make the space between lines bigger */
+  max-height: 0; /* make all div with class = content have 0 height ie. closed*/
+  overflow: hidden; /* hide any text that would jutt out due to the height being 0 */
+  transition: max-height 1.5s; /* when max-height is changed. do so in a transition */
+}
+
+#accordian input[type="radio"]:checked + .content {
+  max-height: 400px;
+}
+
+p {
+  color: red;
+}

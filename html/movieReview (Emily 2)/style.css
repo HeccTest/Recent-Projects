@@ -1,0 +1,15 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: black;
+  background-color: white;
+}
+
+img {
+  width: 80%;
+  height: 100%;
+  object-fit: cover; /* keeps aspect ratio, fills the container, image will be cut off if necessary */
+  margin-left: auto;
+  margin-right: auto;
+  transition: 1s ease;
+}

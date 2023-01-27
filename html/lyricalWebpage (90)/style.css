@@ -1,0 +1,19 @@
+.changer {
+  background-color: white;
+  font-size: 30px;
+  transition-duration: 1s; /* make transition gradual. speed of transition (both hovered and not, can be overwritten)*/
+  transition-property: font-size; /* signifies I want to change font size when I hover over. not necessary to include this */
+}
+
+.changer:hover {
+  background-color: magenta;
+  transition-duration: 2s; /* speed of transition when hovered over */
+  font-size: 40px;
+}
+
+* {
+  background-image: url("https://cdn.glitch.global/caa98d84-4589-4562-87b3-ce9e4c3b7ecf/93c35d42-53d3-4cf0-a24e-478bd26d3cf4.image.png?v=1646692220495");
+/*   background-color: purple; */
+  background-repeat:no-repeat;
+  background-size: cover;
+}

@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.background-box {
+  position: fixed; /* element will stay in the same state when the page is scrolled (test this by making the page large enough to scroll, ie. adding a big empty box)*/
+  z-index: -1; /* in a 3 dimensional plane, moving z into the negatives means moving the object away from the viewer */
+  width: 100%; /* the container box is set to cover the entire screen's width */
+  height: 100%; /* ^ but for height */
+  overflow: hidden; /* any part of this element that is protruding out of its container will be cut off */
+  top: 0; /* 0 away from the top (ie. this box is firmly against the top of the container)*/
+  left: 0; /* ^ but for left */
+}
+
+video {
+  position: absolute; /* will go wherever we tell it to, even if it has to sit on top of another element*/
+  top: 0; /* firmly hug the top of its container (background-box)*/
+  left: 0;
+  min-height: 100%; /* minimum height set to 100% of the container (ie. fill the entire height of the container)*/
+  min-width: 100%;
+}
+
+.fillerBox { /* solely used to force a scroll wheel, this demonstrates how the background will work when the page becomes larger */
+  height: 2100px;
+  background-color: rgba(0, 0, 0, 0.3);
+  /* can put a darkened background tint here to cover entire page */
+}
+
+.textBox {
+  position: absolute; /* ignore other elements */
+  text-align: center; /* center text horizontally */
+  min-width: 100%; /* fill entire screen */
+  min-height: 100%;
+  z-index: 1; /* redundant, but the idea is to move this element to the front. Useful when code becomes more complex */
+  /* background-color: rgba(0, 0, 0, 0.3); /* puts a faint black tint on our background (to emphasize that the video playing in the background is, in fact a background)*/ */
+  /* NOTE: needs to be extented to other containers if we want a consistent darkened video background! */
+}
+
+.textBox h1 {
+  font-size: 65px;
+  text-transform: uppercase; /* make all h1 elements in the class textBox uppercase */
+  font-weight: bold;
+  color: white;
+  margin-top: 15%; /* move away from the top */
+  margin-bottom: 10px;
+}
+
+.textBox p {
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: #aaa; /* grey colour for subtitle */
+}

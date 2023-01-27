@@ -1,0 +1,61 @@
+body {
+  background-color: lightblue;
+}
+
+.banner {
+  box-sizing: border-box;
+  background-image: url("https://destinationontario.mo.cloudinary.net/files/s3fs-public/styles/card_poi/public/2022-03/tulip-festival-credit-ottawa-tourism.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; /* stretches the background to cover the entire size allocated */
+  background-position: center; /* centers the background vertically */
+  width:100%;
+  height: 400px;
+}
+
+.textBox {
+  padding-left: 5%;
+}
+
+ul {
+  list-style-image: url('https://cdn.glitch.com/ed869a63-f125-4f08-a14d-a5b0ca3987d3%2Fbear_16.png?1546881168779');
+}
+
+.filler {
+  position: absolute;
+  left: 50%;
+  top: 37%;
+  height: 500px;
+  width: 620px;
+  border-radius: 20px;
+}
+
+.cardHolder {
+  margin-top: 20%;
+  padding-left: 5%;
+  width: 100%;
+  height: 70%;
+  display: flex;
+}
+
+.card {
+  margin-left: 2%;
+  border-radius: 60px;
+  height: 70%;
+  width: 18%;
+  border: solid 5px blue;
+  border-radius: 60px;
+  overflow: hidden; /* hides any content that spills out of this div */
+}
+
+.card img {
+  max-height: 70%;
+  width: 100%;
+}
+
+.card h3 {
+  text-align: center;
+}
+
+.card:hover {
+  border-color: pink;
+}

@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  flex-direction: column; /* affects the vertical */
+  justify-content: center; /* centers the entire tierList */
+}
+
+.board {
+  width: 80%; /* 80% of the container */
+  height: 80%;
+  background-color: #752cd3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* adds a space between elements inside board (in this case "row") */
+  padding: 10px;
+}
+
+.row {
+  display: flex; /* put items in the row next to one another */
+  width: 100%;
+  height: 13%;
+  background-color: #9963de;
+}
+
+.label {
+  height: 100%;
+  width: 120px;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  height: 100%;
+  width: 10%;
+}

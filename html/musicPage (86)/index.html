@@ -1,0 +1,55 @@
+<html>
+
+<head>
+  <title>My Music Website</title>
+  <link rel="stylesheet" href=style.css>
+</head>
+
+<body>
+  <div class="container">
+    <div class="navbar">
+      <img src="https://cdn.glitch.me/6c39b619-bc6f-4990-8751-235c422d85ec%2Flogo.png?v=1635704108476" class="logo">
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT ME</a></li>
+        <li><a href="#">MUSIC LEGENDS</a></li>
+        <li><a href="#">GAME</a></li>
+        <li><a href="#">CONNECT</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="left-col">
+        <iframe width ="400" height="400"
+        src = "https://www.youtube.com/embed/dQw4w9WgXcQ">
+        </iframe>
+
+        <audio controls id="mySong">
+          <source src="rickroll.mp3" type="audio/mp3">
+        </audio>
+      </div>
+      <div class="right-col">
+        <p>Click Here To Listen</p>
+        <img src="https://cdn.glitch.me/6c39b619-bc6f-4990-8751-235c422d85ec%2Fplay.png?v=1635699533903" id="icon">
+      </div>
+
+      <audio id="mySong">
+        <source src="rickroll.mp3" type="audio/mp3">
+      </audio>
+
+    <script>
+      var mySong = document.getElementById("mySong");
+      var icon = document.getElementById("icon");
+
+      icon.onclick = function(){
+        if (mySong.paused){
+          mySong.play();
+          icon.src = "https://cdn.glitch.me/6c39b619-bc6f-4990-8751-235c422d85ec%2Fpause.png?v=1635699530072";
+        } else {
+          mySong.pause();
+          icon.src = "https://cdn.glitch.me/6c39b619-bc6f-4990-8751-235c422d85ec%2Fplay.png?v=1635699533903";
+        }
+      }
+    </script>
+</body>
+
+</html>

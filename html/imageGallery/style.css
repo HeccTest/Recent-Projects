@@ -1,0 +1,34 @@
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 40px;
+  font-family: sans-serif;
+}
+
+.gallery {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  margin: 5% auto 0; /* top 5%, left and right auto, bottom 0 */
+  box-sizing: border-box;
+  /*  The box-sizing property allows us to include the padding and border in an element's total width and height.
+  If you set box-sizing: border-box; on an element, padding and border are included in the width and height:*/
+}
+
+.image-box {
+  margin: 0 1%; /* margins go: top, right, down, left. Here top and bottom have margin 0, left and right have margin 1%*/
+  flex-grow: 1; /* flex grow indicates how big the item is relative to the others */
+  flex-basis: 0; /* flex basis is the initial size of the element relative to its container */
+  transition: 0.5s;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* resizes the element to fit its container WHILE KEEPING ITS ASPECT RATIO */
+  /* transition: 0.5s; redundant because the image takes up the entire box, as seen above */
+}
+
+.image-box:hover {
+  flex-basis: 50%; /* try changing this value to showcase flex basis */
+}

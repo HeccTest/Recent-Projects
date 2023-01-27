@@ -1,0 +1,70 @@
+<!--
+Date: 03, 15, 2022
+Author: Kai
+Description: Makes a generic tierlist. Has some comments for better understanding
+Source: https://www.youtube.com/watch?v=jqX_dSzaLYk&t=763s
+https://www.pexels.com/ site for pictures -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TierList</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Tier List</h1>
+
+    <div class="board">
+      <div class="row">
+        <div class="label">
+          S Tier
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">
+          A Tier
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">
+          B Tier
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">
+          C Tier
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">
+          D Tier
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="label">
+          F Tier
+        </div>
+      </div>
+
+      <div class="row"> <!-- starting place of all cards -->
+        <img class="card" id="1" draggable="true"
+        src = "1.jpg">
+
+        <img class="card" id="2" draggable="true"
+        src = "2.jpg">
+
+        <img class="card" id="3" draggable="true"
+        src = "3.jpg">
+
+        <img class="card" id="4" draggable="true"
+        src = "4.jpg">
+      </div>
+    </div>
+  </body>
+  <script src ="rows.js"></script> <!-- scripts are continually unconditionally active -->
+  <script src ="cards.js"></script>
+</html>

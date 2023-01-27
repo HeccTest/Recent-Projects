@@ -1,0 +1,27 @@
+#loader {
+  width: 140px;
+  height: 140px;
+
+  border: 18px solid rgb(225,225,225);
+  border-radius: 50%;
+  border-top: 18px solid rgb(106,151,230);
+  border-bottom: 18px solid rgb(106,151,230);
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -70px;
+  margin-left: -70px;
+
+  animation: spin 3s linear infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

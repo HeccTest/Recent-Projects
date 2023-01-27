@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh; /* 100 viewport height; the entire height of the screen */
+  background-color: #2b323c; /* background set to a grey */
+  color: #ffffff; /* content of the container set to white (#ffffff) */
+
+  display: flex; /* set a display type. Also allows us to use change its display settings (ie. align-items, justify-content) */
+  align-items: center; /* center item vertically */
+  justify-content: center; /* center item horizontally */
+}
+
+.container h1 {
+  font-size: 80px;
+  font-weight: 600;
+}
+
+span {
+  color: pink;
+}

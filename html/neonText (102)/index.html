@@ -1,0 +1,28 @@
+<html>
+<head>
+  <title>Neon Text</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 id="btn">CLOSED</h1>
+
+  <script>
+
+    var btn = document.getElementById("btn");
+    btn.onclick = function()
+    {
+      if (btn.classList.contains("neon"))
+      {
+        btn.classList.remove("neon");
+        btn.innerHTML = "CLOSED"; // change the text to CLOSED
+      }
+      else{
+        btn.classList.add("neon");
+        btn.innerHTML = "OPEN"; // change the text to OPEN
+      }
+    }
+  </script>
+</body>
+</html>
+
+<!-- https://fonts.google.com/ -->

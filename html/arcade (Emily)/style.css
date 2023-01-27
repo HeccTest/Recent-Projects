@@ -1,0 +1,65 @@
+body {
+  background-color: #BFDBBF;
+  margin: 30px;
+  font-family: "Arial", sans-serif;
+  color: white;
+  text-transform: uppercase; /* make all text in the body uppercase */
+  letter-spacing: 2px; /* give all text in the body a spacing (between each character) of 2 pixels */
+  text-align: center; /* center all text */
+}
+
+h1 {
+  background-color: #5F7DAF;
+  font-size: 20px;
+  padding: 30px;
+}
+
+table {
+  width: 100%; /* make the tables (we have 3, each row is one table) cover the entire width of the screen */
+}
+
+tr {
+  background-color: #ADC0E0;
+}
+
+td {
+  padding: 20px;
+}
+
+.title {
+  background-color: #7E9E7E;
+  font-size: 18px;
+}
+
+.game {
+  width: 60%;
+}
+
+.info {
+  width: 40%;
+  text-transform: none; /* overwrites the text-transform: uppercase in body */
+  text-align: left; /* overwrites the text-align: center in body */
+}
+
+select { /* changes the appearance of the drop down menu (for rating the games) */
+  background-color: #BFDBBF;
+  padding: 10px;
+  color: white;
+  border: none;
+}
+
+form {
+  margin-top: 40px;
+}
+
+button {
+  height: 50px;
+  width: 30%; /* 30% of the body */
+  background-color: #5F7DAF;
+  border: none;
+  margin: 20px;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px;
+  text-align: center;
+}

@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: skyblue;
+}
+
+img {
+  width: 300px;
+  height: 420px;
+}
+
+.product {
+  position: absolute; /* this box will sit wherever I tell it, even if it is on top of other elements */
+  top: 50%; /* move 50% away from the top */
+  left: 50%;
+  transform: translate(-50%, -50%); /* 2d translation (x,y) */
+  height: 450px;
+  width: 300px;
+  background-color: black;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2); /* h-offset v-offset blur spread color(using rgba: red, green, blue, opacity) */
+  border-radius: 5px; /* rounds the edge slightly, make radius larger for rounder box */
+
+  overflow: hidden;
+}
+
+
+.product .imgBox {
+  height: 100%;
+  box-sizing: border-box; /* combines margin, padding, and borders into box. generally helps make container not jut outward */
+}
+
+.product .imgBox img {
+  display: block; /* display block definition: https://www.w3schools.com/cssref/pr_class_display.asp */
+  width: 90%; /* make img smaller */
+  margin: 10px auto 0; /* adds a 10px margin above, auto left right (centers img), and 0px margin bottom */
+}
+
+
+.details {
+  position: absolute;
+  width: 100%;
+  bottom: -138px; /* moves the entire panel of details down (default) */
+  padding: 10px;
+  background-color: white;
+  box-sizing: border-box;
+
+  transition: 0.5s; /* defines how long a transition (changes to this element) should take */
+}
+
+.product:hover .details { /* when product (entire box) is hovered over, bring up the details which will overlap the image */
+  bottom: 0px;
+}
+
+.details h2 span { /* changes the span (brand name of item) */
+  font-size: 15px;
+  color: #ccc; /* grey subtext colour */
+  font-weight: normal; /* change the boldness of the text. Make it less bold here */
+}
+
+.details .price {
+  position: absolute;
+  top: 30px;
+  right: 25px;
+  font-weight: bold;
+  color: #000;
+  font-size: 30px;
+}
+
+label {
+  display: block;
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none; /* gets rid of the list style (bullet points) */
+  margin: 5px 5px 0; /* 5 top, 5 left / right, 0 bottom*/
+  font-size: 15px;
+  font-weight: normal;
+  color: #ccc;
+}
+
+ul li:first-child { /* changes the first element of the list */
+  margin-left: 0;
+}
+
+ul.colours li { /* make each list item in the unordered list named "colours" a square of height 15px and width 15px */
+  height: 15px;
+  width: 15px;
+}
+
+ul.colours li:nth-child(1) {
+  background-color: blue;
+}
+
+ul.colours li:nth-child(2) {
+  background-color: red;
+}
+
+ul.colours li:nth-child(3) {
+  background-color: green;
+}
+
+ul.colours li:nth-child(4) {
+  background-color: purple;
+}
+
+ul.colours li:nth-child(5) {
+  background-color: teal;
+}
+
+a {
+  display: block;
+  padding: 5px;
+  color: #fff;
+  margin: 10px 0 0;
+  background: purple;
+  text-align: center;
+  text-decoration: none; /* removes the underline on default <a> elements */
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+a:hover {
+  background: pink;
+}
